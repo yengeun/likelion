@@ -20,7 +20,7 @@ a:link, a:visited {
 
 nav {
     height: 80px;
-    background-color: rgb(231, 241, 123);/* 2번) 원하는 컬러를 지정해주세요.(맨 위) */ 
+    background-color: rgb(229, 197, 236);/* 2번) 원하는 컬러를 지정해주세요.(맨 위) */ 
     line-height: 80px;
 }
 
@@ -103,7 +103,7 @@ ul.nav-btn > li {
 .sec {
     text-align: center;
     padding: 100px 0;
-    background-color: #6d3f06/* 4번) 원하는 컬러를 지정해주세요. */
+    background-color: #edb5ea/* 4번) 원하는 컬러를 지정해주세요. */
 }
 
 .sec article {
@@ -125,10 +125,10 @@ ul.nav-btn > li {
 .card-img {
     overflow: hidden;
     width: 300px;
-    height: 300px;
+    height: 200px;
     border-style: dashed;
     border-radius: 40px;
-    border-color: #f170f1;
+    border-color: #f13c05;
     /* 5번) 코드를 작성해 사진의 테두리를 만들어주세요. (테두리 대쉬, 컬러 자유, 테두리 원하는 만큼 둥글게) */
 
 }
@@ -147,14 +147,17 @@ ul.nav-btn > li {
     font-weight: bold;
 }
 
-
+.name {
+    display: flex;
+    align-items: center;
+}
 
 .daemun {
     /* 7번) 글자 두껍게, 폰트 사이즈는 20px로 지정해주세요. */
     font-weight: bold;
     font-size: 20px;
     text-align: left;
-    margin-bottom: 0px;
+    /*margin-bottom: 0px;*/
 
 }
 
@@ -163,14 +166,14 @@ ul.nav-btn > li {
     font-weight: lighter;
     font-size: 15px;
     text-align: left;  
-    margin-top: 0px;
+    /* margin-top: 0px; */
 }
 
 /* footer */
 .ft {
     padding: 10px;
     text-align: center;
-    background-color:rgb(231, 241, 123);    /* 9번) 원하는 컬러로 지정해주세요. */
+    background-color:rgb(229, 197, 236);    /* 9번) 원하는 컬러로 지정해주세요. */
     font-weight: bold;
     color: white;
 }
