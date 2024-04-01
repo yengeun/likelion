@@ -171,9 +171,9 @@ ul.nav-btn > li {
 
 /* footer */
 .ft {
-    padding: 30px;
+    padding: 80px;
     text-align: center;
-    background-color:rgb(229, 197, 236);    /* 9번) 원하는 컬러로 지정해주세요. */
+    background-color:rgb(229, 197, 236);    
     font-weight: bold;
     color: white;
 }
