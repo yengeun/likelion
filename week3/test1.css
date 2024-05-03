@@ -53,11 +53,11 @@ body {
 }
 
 .box{
-    width: 200px;
-    height: 200px;
-    background-color: cadetblue;
+    width: 500px;
+    height: 500px;
+    background-color: #866756;
     position: absolute;
-    top: 80%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%); 
 }
