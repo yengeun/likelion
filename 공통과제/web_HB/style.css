@@ -19,28 +19,71 @@ nav>ul>li>a{display: block; width: 120px; background: #444c61;
 nav>ul>li>ul>li:hover>a{color: #333; background: #F5E4EA;}
 
 .sub{display:none;}
-.sub li a{background: #00Ff0000; display:block; padding: 5px; text-align: center; font-size: 14px;}
+.sub li a{background: #000000; display:block; padding: 5px; text-align: center; font-size: 14px;}
 
-.slide{width:1200px;height: 350px; background: url(img/Rectangle92.jpg) no-repeat center/cover; overflow: hidden;}
+
+.slide { position: relative; height: 350px; overflow: hidden; }
+.slide ul{ position: absolute; top: 0; left:0; height: 900px; }
+.slide ul li{width: 1200px; height: 350px;}
+.slide ul li a{display: block; height: 100%;}
+.slide ul li.s1 { background: url('img/Rectangle92.jpg') no-repeat center/cover; }
+.slide ul li.s2 { background: url('img/Rectangle99.jpg') no-repeat center/cover; }
+.slide ul li.s3 { background: url('img/Rectangle100.jpg') no-repeat center/cover; }
+
 
 .con{height: 280px;  display:flex;}
 .con article{width: 400px; height: 100%;}
-.con1{background: #F5E4EA;}
-.con1 .tabmenu li{width: 150px; display: inline-block; background: #F5E4EA;}
-.con1 .tabmenu li.on{background: #444c61; color: #F5E4EA;}
-.con1 .tabmenu li a{display: block; text-align: center;padding: 10px 0; font-weight: bold;}
-.con .tabcon{background: #F5E4EA; height: 280px; padding: 10px; }
+.con1{background: #F5E4EA;position: relative;}
+.con1 .tabmenu>li{width: 150px; display: inline-block; background: #F5E4EA;}
+.con1 .tabmenu>li.on{background: #444c61; color: #F5E4EA;}
+.con1 .tabmenu>li>a{display: block; text-align: center;padding: 10px 0; font-weight: bold;}
+.con .tabcon{background: #F5E4EA; height: 280px; padding: 10px; position:absolute; width: 100%; left:0; }
 
 
 .notice th{text-align: left; color: #444c61; font-weight: lighter;}
 .notice td{color: #444c61;font-weight: lighter;}
 .notice a{display: block; padding: 5px;}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #FFF;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.close-popup {
+    display: block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background: #333;
+    color: #FFF;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+
 .con .gall{padding-top: 30px; display:none;}
 .gall ul{text-align: center;}
 .gall ul li{width: 120px; display: inline-block; }
 
-.con2{padding:10px;background: url(img/Rectangle92\(1\).jpg); display: block; text-align: center;  overflow: hidden; color:#FFF}
-.con3{padding:10px;background: url(img/Rectangle92\(2\).jpg); display: block; text-align: center;  overflow: hidden; color:#FFF}
+
+.con2{padding:10px; background: url(img/Rectangle92\(1\).jpg); display: block; text-align: center;  line-height: 300px; overflow:  hidden; color:#FFF}
+.con3{padding:10px;background: url(img/Rectangle92\(2\).jpg); display: block; text-align: center; line-height: 300px; overflow: hidden; color:#FFF}
+
 footer{position: relative; height: 100px; background: #444c61;}
 footer .flogo{position: absolute; padding:10px; top: 15px; font-size: 40px; color: #9d9d9d; font-weight: lighter;}
 footer .fcopy{position: absolute; left:400px; top:40px; color: #9d9d9d;}
