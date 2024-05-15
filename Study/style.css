@@ -41,25 +41,294 @@ header{
     float: left;
     width:  200px;
 }
+.navi{
+    margin-top: 10px;
+    margin-left: 10px;
+    text-align: center;
+}
+.navi>li{
+    line-height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #788402;
+    color: #ffffff;
+}
+.navi>li>a:hover{
+    background-color: #342628;
+    color: #feaa00;
+}
+.submenu{
+    float: left;
+    width: 100%;
+    display: none;
+}
+.submenu>li{
+    width: 180px;
+    height: 50px;
+}
+.submenu>li>a{
+    line-height: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #cccccc;
+    color: #ffffff;
+}
+.submenu>li>a:hover{
+    background-color: #999999;
+    color: #feaa00;
+}
+.spotmenu{
+    float: left;
+    width: 180px;
+    height: 10px;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.spotmenu li{
+    width: 80px;
+    display: inline-block;
+    text-align: center;
+}
+.spotmenu li:hover{
+    font-weight: bold;
+}
+.spotmenu div{
+    width: 10px;
+    display: inline-block;
+}
 .imgslide{
     float: right;
     width: calc(100% - 200px);
     height: 400px;
+    position: relative;
+    overflow: hidden;
 }
+.slidelist{
+    width: 100%;
+    height: 1200px;
+}
+.slidelist ul li{
+    width: 100%;
+    height: 400px;
+    margin: 0;
+}
+.slidelist img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+.slidelist span{
+    width: 500px;
+    height: 50px;
+    position: absolute;
+    margin-top: 175px;
+    left: 33%;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+    line-height: 50px;
+    background-color: rgba(40,40,40,0.5);
+}
+
+.contents{
+    float: right;
+    width: calc(100% - 200px);
+    height: 450px;
+    position: relative;
+}
+.banner{
+    float: left;
+    width: 100%;
+    height: 200px;
+    position: relative;
+}
+.banner img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+.banner span{
+    float: left;
+    width: 96%;
+    height: 100px;
+    position: absolute;
+    top: 20px;
+    left: 2%;
+    padding-top: 40px;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 30px;
+    background-color: rgba(0,0,0,0.3);
+}
+.banner span h4{
+    font-size: 18px;
+    color: #ffffff;
+}
+.banner span:hover{
+    background-color: rgba(0,0,0,0.5);
+}
+
+
 .tabmenu{
     float: left;
     width:100%;
     height: 250px;
 }
+.tabmenu>ul>li{
+    float: left;
+    width: 100px;
+    line-height: 40px;
+}
+.tabmenu>ul>li>a{
+    display: block;
+    font-size: 16px;
+    text-align: center;
+    background-color: #cccccc;
+    border: 1px solid #dddddd;
+    border-bottom: none;
+}
+.tabmenu>ul>li>a:hover{
+    background-color: #eeeeee;
+}
+.tabmenu>ul>li:first-child a{ /*탭 타이틀 첫 번쨰 a 요소*/
+    border-right: none;
+}
+.tabmenu>ul>li.active>a{
+    background-color: #ffffff;
+}
+.tabmenu>ul>li div{
+    position: absolute;
+    left: 0px;
+    height: 0px;
+    overflow: hidden;
+}
+.tabmenu>ul>li.active div{
+    height: 180px;
+    width: calc(100% -5px);
+    border: 1px solid #dddddd;
+    z-index: 1;  /*tabmenu>li 요소 중 active 클래스가 할당된 div 후손 요소가 화면 상에서 더 앞쪽에 나타나도록*/
+}
+.notice ul{
+    float: left;
+    width: 98%;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+.notice li{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.notice li:nth-child(2n){ /*공지사항 중 2배수 리스트 스타일*/
+    background-color: #cccccc;
+}
+.notice li span{
+    float: right;
+}
+.notice li:hover{
+    font-weight: bold;
+}
+.gallery ul{
+    display: flex;
+    justify-content: flex-start; /* :주축방향으로아이템을정렬하는속성이며,
+    fiex- start로속성값을지정함으로써요소들이화면왼쪽에서부터일정 한 간격으로 배치됨*/
+}
+.gallery li{
+    float: left;
+    width: 160px;
+    height: 160px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.gallery img{
+    width: 100%;
+    height: auto;
+    padding: 5px;
+}
+.gallery li:hover{
+    opacity: 0.5; /*불투명도 50%ㄴ*/
+}
+#layer{
+    position: absolute;
+    z-index: 1;
+    display: none;
+}
+#layer .active{
+    display: block;
+}
+.layer_up{
+    width: 500px;
+    height: 400px;
+    position: fixed;
+    left: 30%;
+    top: 20%;
+    background-color: #ffffff;
+}
+.uptitle{
+    margin-top: 30px;
+    text-align: center;
+    line-height: 16px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.upbody{
+    padding: 30px;
+    text-align: 16px;
+    font-size: 16px;
+    line-height: 30px;
+}
+.btn{
+    width: 80px;
+    height: 20px;
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    background: #cccccc;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+#shortcut{
+    top: 0px;
+    right: 0px;
+    position: fixed;
+    background-color: rgba(120,120,120, 0.5);
+    z-index: 1;
+}
+#shortcut img{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+#shortcut img:hover{
+    opacity: 0.5;
+}
+
+
 footer{
     float: right;
     width:100%;
     height:100px;
+    background-color: #342628;
 }
 .btlogo{
     float: left;
     width:200px;
     height: 100px;
+}
+.btlogo img{
+    float: left;
+    height: 80px;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 .btwrap{
     float: right;
@@ -70,9 +339,28 @@ footer{
     float: left;
     width: 80%;
     height: 100px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 100px;
+    color: #ffffff;
 }
 .sns{
     float: right;
     width: 20%;
     height: 100px;
+}
+.sns ul{
+    margin-right: 20px;
+    margin-top: 25px;
+}
+.sns li{
+    display: inline-block;
+}
+.sns img{
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+}
+.sns img:hover{
+    opacity: 0.5;
 }

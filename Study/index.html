@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>행복봉사단</title>
     <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="javascript/jquery-1.12.3.js"></script>
+    <script src="javascript/script.js" defer type = "text/javascript"></script>
 </head>
 <body>
     <header>
@@ -13,41 +15,196 @@
                 <a href="#"><img src= "img/logo.png" alt="로고"></a>
             </div>
             <nav class="menu">
-                메뉴 자리
+                <ul class="navi">
+                    <li><a href="#">봉사단 소개</a>
+                        <ul class="submenu">
+                            <li><a href="#">설립목적</a></li>
+                            <li><a href="#">이사진</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">활동 안내</a>
+                    <ul class="submenu">
+                        <li><a href="#">말벗봉사</a></li>
+                        <li><a href="#">연탄봉사</a></li>
+                        <li><a href="#">식사봉사</a></li>
+                    </ul>
+                    </li>
+                    <li><a href="#">봉사 신청</a>
+                        <ul class="submenu">
+                            <li><a href="#">정기봉사자</a></li>
+                            <li><a href="#">지역별</a></li>
+                            <li><a href="#">활동별</a></li>
+                            <li><a href="#">봉사자등록</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">알림마당</a>
+                        <ul class="submenu">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">문의하기</a></li>
+                        </ul>
+                    </li>  
+                </ul>
             </nav>
             <div class="spotmenu">
-                스팟 메뉴 자리
+                <ul>
+                    <li class="spotmenu-btn">
+                        <a href="#">로그인</a>
+                    </li>
+                    <div> | </div> <!--스팟메뉴에서' 로그인'과'회원가입'메뉴의구분을위해'(Pipeline) 특수문자를추가했습니다.《div》태그를사용하여 문자의 위치를포함한스타일을지정하도록합니다.-->
+                    <li class="spotmenu-btn">
+                        <a href="#">회원가입</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </header>
 
     <div class="imgslide">
-        이미지 슬라이드 자리
+        <div class="slidelist">
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="img/img1.jpg" alt="이미지1">
+                        <span>마음이 따뜻해지는 행동</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/img2.jpg" alt="이미지2">
+                        <span>행복의 씨앗을 심는 일</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/img3.jpg" alt="이미지3">
+                        <span>이웃과 함께하는 기쁨</span> <!--span: 다른 텍스트오 구분. 줄 바꾸지 않고 글자색이나 배경색 변경-->
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
 
     <div class="contents">
         <div class="banner">
-            배너 자리
+            <a href="#">
+                <img src="img/banner.png" alt="배너">
+                <span>
+                    <h4>교육봉사활동 자원봉사자 모집중</h4>
+                    클릭하여 자세한 내용을 확인해보세요!
+                </span>
+            </a>
         </div>
         <div class="tabmenu">
-            <div class="notice">
-                공지사항 자리
-            </div>
-            <div class="gallery">
-                갤러리 자리
-            </div>
+            <ul>
+                <li class=" active"><a href="#">공지사항</a>
+                    <div class="notice">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    행복봉사단 23기 모집 공고
+                                    <span>2024.03.01</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    봄 맞이 정기 봉사 안내
+                                    <span>2024.03.01</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    행복봉사단 사무국 직원 채용 공고
+                                    <span>2024.03.01</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    정기 후원자 대상 게릴라 이벤트 안내
+                                    <span>2024.03.01</span>   
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">갤러리</a>
+                    <div class="gallery">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <img src="img/gallery1.jpg" alt="갤러리1">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/gallery2.jpg" alt="갤러리2">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/gallery3.jpg" alt="갤러리3">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
+    <div id="layer">
+        <div class="layer_up">
+            <div class="uptitle">
+                행복봉사단 23기 모집 공고 안내문
+            </div>
+            <div class="upbody">
+                우리는 봉사와 사회공헌을 통해 더 나은 세상을 만들고자 하는
+                열정적인 멤버들을 모집합니다. 사회에 기여하고 나눔의 가치를
+                실천하며, 동료들과 함께 성장하고, 소중한 순간을 함께 합니다.
+            </div>
+            <div class="btn">닫기</div>
+        </div>
+    </div>
+
+    <div id="shortcut">
+        <a href="#">
+            <img src="img/shortcut1.jpg" alt="바로가기">
+        </a>
+        <a href="#">
+            <img src="img/shortcut2.jpg" alt="바로가기">
+        </a>
+        <a href="#">
+            <img src="img/shortcut3.jpg" alt="바로가기">
+        </a>
+    </div>
+
+
     <footer>
         <div class="btlogo">
-            하단 로고 자리
+            <a href="#">
+                <img src="img/logo.png" alt="하단로고">
+            </a>
         </div>
         <div class="btwrap">
             <div class="copy">
-                Copyright 자리
+                COPYRIGHTⓒ by WEBDESIGN. ALL RIGHTS RESERVED
             </div>
             <div class="sns">
-                SNS 자리
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="img/sns1.jpg" alt="sns">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/sns2.jpg" alt="sns">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/sns3.jpg" alt="sns">
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
     </footer>
