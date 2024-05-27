@@ -1,0 +1,21 @@
+body{
+    background-color: #e9b508;
+    overflow: hidden;
+}
+.btn_box{
+    height: 100vh;
+    display: flex;  //display, justifty,align 세 개는 세트로 -> 가운데 정렬
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    button{
+        width: 200px;
+        height: 100px;
+        border-radius: 10px;
+        background-color: #fff;
+        border: 0;
+        font-size: 20px;
+        cursor: pointer;
+    }
+}

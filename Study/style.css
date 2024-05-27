@@ -208,7 +208,7 @@ header{
 }
 .tabmenu>ul>li.active div{
     height: 180px;
-    width: calc(100% -5px);
+    width: calc(100% - 5px); /*띄어쓰기 제대로 해야 적용됨*/
     border: 1px solid #dddddd;
     z-index: 1;  /*tabmenu>li 요소 중 active 클래스가 할당된 div 후손 요소가 화면 상에서 더 앞쪽에 나타나도록*/
 }
