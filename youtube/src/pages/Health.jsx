@@ -3,7 +3,11 @@ import Main from '../components/section/Main'
 
 const Health = () => {
     return (
-        <div>Health</div>
+        <Main 
+            title = "헬스"
+            description="유용한 헬스영상입니다.">
+            Health
+        </Main>
     )
 }
     

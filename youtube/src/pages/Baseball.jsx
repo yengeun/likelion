@@ -3,7 +3,11 @@ import Main from '../components/section/Main'
 
 const Baseball = () => {
     return (
-        <div>Baseball</div>
+        <Main 
+        title = "야구 하이라이트"
+        description="오늘의 추천 야구 하이라이트 영상입니다.">
+        Baseball
+    </Main>
     )
 }
 

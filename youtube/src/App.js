@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Main from './components/section/Main';
 import Baseball from './pages/Baseball';
 import { BiHealth } from 'react-icons/bi';
+import Health from './pages/Health';
 
 const Home = lazy(() => import('./pages/Home'));
 const Today = lazy(() => import('./pages/Today'));
