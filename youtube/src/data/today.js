@@ -25,6 +25,7 @@ export const todayText = [
         img: todayView03,
         title: "LG Twins 야구",
         desc : "무적엘지",
+        author: "LGTWINSTV",
         channelId: "UCsvQSv7EeCMHyYb9ENKAJZw",
         date: "2024.07.09",
         page: "/baseball"
