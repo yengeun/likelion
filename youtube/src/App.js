@@ -1,14 +1,12 @@
 import React, { Suspense, lazy } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Main from './components/section/Main';
-import Baseball from './pages/Baseball';
-import { BiHealth } from 'react-icons/bi';
-import Health from './pages/Health';
+
 
 const Home = lazy(() => import('./pages/Home'));
 const Today = lazy(() => import('./pages/Today'));
-const Developer = lazy(() => import('./pages/Baseball'));
-const Webd = lazy(() => import('./pages/Health'));
+const Baseball = lazy(() => import('./pages/Baseball'));
+const Health = lazy(() => import('./pages/Health'));
 const Port = lazy(() => import('./pages/Port'));
 const Channel = lazy(() => import('./pages/Channel'));
 const Video = lazy(() => import('./pages/Video'));
