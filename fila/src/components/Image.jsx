@@ -1,24 +1,58 @@
-import React from 'react'
+import React, { useState } from 'react';
+import img1 from '../assets/img/Rectangle135.svg';
+import img2 from '../assets/img/Rectangle136.svg';
+import img3 from '../assets/img/Rectangle137.svg';
 
-const Image = ( props ) => {
+import '../assets/css/style.css';
+
+const Image = () => {
+    const [activeTag, setActiveTag] = useState('tag1');
+
+    const tags = {
+        tag1: [
+            { img: img1, title: 'COLD WAVE 그라데 고립된 반팔 티셔츠', price: '49,000원' },
+            { img: img2, title: 'COLD WAVE 그라데 고립된 반팔 티셔츠', price: '49,000원' },
+            { img: img3, title: 'COLD WAVE 그라데 고립된 반팔 티셔츠', price: '49,000원' },
+        ],
+        tag2: [
+            { img: img1, title: 'COLD WAVE 그라데 고립된 반팔 티셔츠2', price: '50,000원' },
+            { img: img2, title: 'COLD WAVE 그라데 고립된 반팔 티셔츠2', price: '50,000원' },
+            { img: img3, title: 'COLD WAVE 그라데 고립된 반팔 티셔츠2', price: '50,000원' },
+        ]
+    };
+
+    const handleTagClick = (tag) => {
+        setActiveTag(tag);
+    };
+
     return (
-        <section id="imageType" className={`imageType__wrap ${props.element}`}>
-            <h2>{props.title}</h2>
-            <p>이미지 유형입니다. 마우스 오버시 자세한 정보가 나와는 구조입니다.</p>
-            <div className="image__inner container">
-                <article className="image img1">
-                    <h3 className="image__title">강아지계의 연예인</h3>
-                    <p className="image__desc">최근 연예인들 사이에서 키우는 강아지로 유명해진 비숑프리제는 생김새가 아주 작은 바빗과 매우 흡사하여 바비숑이라는</p>
-                    <a className="image__btn" href="/">자세히 보기</a>
-                </article>
-                <article className="image img2">
-                    <h3 className="image__title">강아지계의 마스코트</h3>
-                    <p className="image__desc">최근 연예인들 사이에서 키우는 강아지로 유명해진 비숑프리제는 생김새가 아주 작은 바빗과 매우 흡사하여 바비숑이라는</p>
-                    <a className="image__btn yellow" href="/">자세히 보기</a>
-                </article>
+        <div className="products">
+            <h2>지금 많이 찾는 상품</h2>
+            <div className="tags">
+                <span
+                    className={`tag ${activeTag === 'tag1' ? 'active' : ''}`}
+                    onClick={() => handleTagClick('tag1')}
+                >
+                    #발열티셔츠
+                </span>
+                <span
+                    className={`tag ${activeTag === 'tag2' ? 'active' : ''}`}
+                    onClick={() => handleTagClick('tag2')}
+                >
+                    #에어쿨
+                </span>
             </div>
-        </section>
-    )
-}
+            <div className="product-list">
+                {tags[activeTag].map((product, index) => (
+                    <div className="product-item" key={index}>
+                        <img src={product.img} alt={`상품 ${index + 1}`} />
+                        <p className="product-title">{product.title}</p>
+                        <p className="product-price">{product.price}</p>
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
+};
 
-export default Image
+export default Image;

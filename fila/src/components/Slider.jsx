@@ -1,40 +1,60 @@
-import React from 'react'
+import React, { useState } from 'react';
+import '../assets/css/style.css';
+import image2 from '../assets/img/image2.svg';
+import image3 from '../assets/img/image3.svg';
 
-const Slider = ( props ) => {
+const Slider = () => {
+    const [currentSlide, setCurrentSlide] = useState(0);
+
+    const slides = [
+        {
+            img: image2,
+            desc: '24 NEW 인터런',
+            buttonText: '자세히 보기'
+        },
+        {
+            img: image3,
+            desc: 'Description for the second slide',
+            buttonText: 'Learn More'
+        }
+    ];
+
+    const nextSlide = () => {
+        setCurrentSlide((currentSlide + 1) % slides.length);
+    };
+
+    const prevSlide = () => {
+        setCurrentSlide((currentSlide - 1 + slides.length) % slides.length);
+    };
+
     return (
-        <section id="sliderType" className={`slider__wrap ${props.element}`}>
-            <h2 className="blind">슬라이드 유형</h2>
-            <div className="slider__inner">
-                <div className="slider">
-                    <div className="slider__img">
-                        <div className="desc">
-                            <span>developer</span>
-                            <h3>new frontend</h3>
-                            <p>
-                                너무 무리하지 말아요! 이미 당신은 잘하고 있고!<br />
-                                앞으로도 잘 할 수 있어요!
-                            </p>
-                            <div className="btn">
-                                <a href="/">자세히 보기</a>
-                                <a href="/" className="black">사이트 보기</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="slider__arrow">
-                        <a href="/" className="left"><span className="ir">이전 이미지</span></a>
-                        <a href="/" className="right"><span className="ir">다음 이미지</span></a>
-                    </div>
-                    <div className="slider__dot">
-                        <a href="/" className="dot active"><span className="ir">1</span></a>
-                        <a href="/" className="dot"><span className="ir">2</span></a>
-                        <a href="/" className="dot"><span className="ir">3</span></a>
-                        <a href="/" className="play"><span className="ir">플레이</span></a>
-                        <a href="/" className="stop"><span className="ir">정지</span></a>
+        <div className="slider">
+            <div 
+                className="slider__img" 
+                style={{ backgroundImage: `url(${slides[currentSlide].img})` }}
+            >
+                <div className="desc">
+                    <p>{slides[currentSlide].desc}</p>
+                    <div className="btn">
+                        <a href="#">{slides[currentSlide].buttonText}</a>
                     </div>
                 </div>
             </div>
-        </section>
-    )
-}
+            <div className="slider__arrow">
+                <a className="left" onClick={prevSlide}>{"<"}</a>
+                <a className="right" onClick={nextSlide}>{">"}</a>
+            </div>
+            <div className="slider__dot">
+                {slides.map((_, index) => (
+                    <a 
+                        key={index} 
+                        className={index === currentSlide ? 'active' : ''} 
+                        onClick={() => setCurrentSlide(index)}
+                    ></a>
+                ))}
+            </div>
+        </div>
+    );
+};
 
-export default Slider
+export default Slider;

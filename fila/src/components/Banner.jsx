@@ -1,19 +1,37 @@
-import React from 'react'
+import React from 'react';
+import banner1 from '../assets/img/Rectangle 178.jpg';
+import banner2 from '../assets/img/Rectangle 179.jpg';
+import banner3 from '../assets/img/Rectangle 180.jpg';
+import banner4 from '../assets/img/Rectangle 183.jpg';
+import banner5 from '../assets/img/Rectangle 184.jpg';
+import banner6 from '../assets/img/Rectangle 187.jpg';
 
-const Banner = ( props ) => {
+import '../assets/css/style.css';
+
+const Banner = () => {
+    const images = [
+        { src: banner1, alt: '배너 이미지 1' },
+        { src: banner2, alt: '배너 이미지 2' },
+        { src: banner3, alt: '배너 이미지 3' },
+        { src: banner4, alt: '배너 이미지 4' },
+        { src: banner5, alt: '배너 이미지 5' },
+        { src: banner6, alt: '배너 이미지 6' },
+    ];
+
     return (
-        <section id="bannerType" className={`banner__wrap ${props.element}`}>
-            <h2 className="blind">{props.title}</h2>
+        <div className="banner">
             <div className="banner__inner">
-                <h3 className="title">유튜버 웹보이</h3>
-                <p className="desc">
-                    더 다양한 강의는 유튜브를 통해 제공하고 있습니다.
-                    <a href="/" title="유튜브 페이지 이동">youtube.com/c/Webstoryboy</a>
-                </p>
-                <span className="small">배너 유형01</span>
+                {images.map((image, index) => (
+                    <div className="banner__item" key={index}>
+                        <img src={image.src} alt={image.alt} />
+                    </div>
+                ))}
             </div>
-        </section>
-    )
-}
+            <div className="banner__footer">
+                <p>@fila_korea</p>
+            </div>
+        </div>
+    );
+};
 
-export default Banner
+export default Banner;
