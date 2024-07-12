@@ -14,7 +14,7 @@ const Slider = () => {
         },
         {
             img: image3,
-            desc: 'FILA ECHAPPE',
+            desc: 'FILA APPECHE',
             buttonText: 'Learn More'
         }
     ];

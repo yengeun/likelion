@@ -8,7 +8,7 @@ import userIcon from '../assets/img/user.svg';
 const Header = () => {
     const dropdownContent = (
         <div className="dropdown-menu">
-            <div>
+            <div className="dropdown-column">
                 <h3>New & Featured</h3>
                 <ul>
                     <li>신상품</li>
@@ -22,7 +22,7 @@ const Header = () => {
                     <li>PROPLAYER COLLECTIONS</li>
                 </ul>
             </div>
-            <div>
+            <div className="dropdown-column">
                 <h3>의류</h3>
                 <ul>
                     <li>전체보기</li>
@@ -38,7 +38,7 @@ const Header = () => {
                     <li>트레이닝 셋업</li>
                 </ul>
             </div>
-            <div>
+            <div className="dropdown-column">
                 <h3>신발</h3>
                 <ul>
                     <li>전체보기</li>
@@ -52,7 +52,7 @@ const Header = () => {
                     <li>에사패</li>
                 </ul>
             </div>
-            <div>
+            <div className="dropdown-column">
                 <h3>용품</h3>
                 <ul>
                     <li>전체보기</li>
@@ -66,7 +66,7 @@ const Header = () => {
                     <li>기타</li>
                 </ul>
             </div>
-            <div>
+            <div className="dropdown-column">
                 <h3>언더웨어</h3>
                 <ul>
                     <li>전체보기</li>
@@ -81,7 +81,7 @@ const Header = () => {
                     <li>파자마</li>
                 </ul>
             </div>
-            <div>
+            <div className="dropdown-column">
                 <h3>스포츠</h3>
                 <ul>
                     <li>테니스</li>

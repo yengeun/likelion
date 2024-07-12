@@ -51,15 +51,28 @@
 
 .header__menu li a {
     padding: 10px 20px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, border-bottom 0.3s;
     text-decoration: none;
     color: #fff;
     font-weight: bold;
+    position: relative;
 }
 
-.header__menu li a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
+.header__menu li a:hover::after {
+    width: 100%;
+}
+
+.header__menu li a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .header__icons {
@@ -86,8 +99,9 @@
     width: 100%;
     background-color: #fff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    z-index: 999;
+    z-index: 9999; /* Ensures it appears above the slider */
     padding: 20px 0;
+    top: 60px; /* Adjust this value to make sure the dropdown covers the slider */
 }
 
 .menu-item:hover .dropdown {
@@ -102,13 +116,13 @@
     list-style: none;
 }
 
-.dropdown-menu > div {
+.dropdown-menu .dropdown-column {
     flex: 1;
     padding: 0 20px;
 }
 
 .dropdown-menu h3 {
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 10px;
 }
 
@@ -119,8 +133,10 @@
 }
 
 .dropdown-menu li {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+    font-size: 14px;
 }
+
 
 
 /* slider */
