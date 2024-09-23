@@ -15,7 +15,7 @@ function Footer() {
         </div>
 
         <div className="footer-banner-right">
-          <img src="https://textbook.jihak.co.kr/img/cha-foot1.svg" alt="Event 2" className="footer-banner-image" />
+          <img src="https://textbook.jihak.co.kr/img/cha-foot2.svg" alt="Event 2" className="footer-banner-image" />
           <div className="footer-banner-text">
             <h2>지학사의 2022 개정 교육과정<br />새로운 교과서를 응원해!</h2>
             <a href="#" className="footer-banner-link">한줄평 이벤트 바로가기 →</a>
