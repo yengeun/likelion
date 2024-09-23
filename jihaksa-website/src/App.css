@@ -1,14 +1,11 @@
-/* 전체 페이지 컨테이너 */
-.app-container {
-  font-family: Arial, sans-serif;
-}
-
-/* 메인 콘텐츠 레이아웃 */
+/* ================= GENERAL CONTAINER ================= */
 .main-content {
-  display: flex;
-  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 20px;
 }
+
+/* ================= HEADER STYLING ================= */
 .header {
   display: flex;
   justify-content: space-between;
@@ -23,19 +20,19 @@
 }
 
 .logo-image {
-  height: 40px;
+  height: 50px; /* Adjust the logo height */
 }
 
 .nav-menu ul {
   list-style: none;
   display: flex;
-  gap: 40px; /* 메뉴 간의 간격을 조정 */
+  gap: 30px; /* Space between menu items */
   padding: 0;
   margin: 0;
 }
 
 .nav-menu ul li {
-  font-size: 18px; /* 글씨 크기 조정 */
+  font-size: 18px;
   font-weight: 500;
   color: #000;
   cursor: pointer;
@@ -48,7 +45,7 @@
 }
 
 .nav-menu ul li:hover a {
-  color: #007bff; /* 호버 시 파란색으로 변경 */
+  color: #007bff; /* Change color on hover */
 }
 
 .event-badge {
@@ -61,86 +58,249 @@
   margin-left: 5px;
   display: inline-block;
 }
-/* 메인 레이아웃 */
+
+/* ================= FOOTER STYLING ================= */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Footer Top Section for the Banner */
+.footer-top {
+  background-color: #f8d16f;
+  width: 100%;
+  padding: 30px 0;
+}
+
+.footer-banner {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-banner-left, .footer-banner-right {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 45%;
+}
+
+.footer-banner-image {
+  width: 100px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.footer-banner-text h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 0;
+}
+
+.footer-banner-link {
+  display: block;
+  margin-top: 10px;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-banner-link:hover {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.footer-logo img {
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.footer-text p {
+  color: #ccc;
+  font-size: 12px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+
+/* ================= HERO AND MAIN1 STYLING ================= */
+/* Fixed 1920px width for the main wrapper */
+.main-wrapper {
+  width: 1920px;
+  margin: 0 auto; /* Centered on the page */
+}
+
+/* Main Content Layout */
 .main-content {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  padding: 40px;
+  max-width: 1920px;
 }
 
-/* 이벤트 섹션 스타일 */
+/* Hero Section Styling */
 .event-section {
-  width: 40%;
-  padding: 20px;
+  width: 45%;
+  padding: 40px;
+}
+
+.event-section .text-section {
+  margin-bottom: 30px;
 }
 
 .event-section h1 {
-  font-size: 36px;
+  font-size: 60px;
   font-weight: bold;
-  margin-bottom: 10px;
+  line-height: 1.2;
+  margin-bottom: 30px;
 }
 
 .event-section p {
-  font-size: 16px;
+  font-size: 20px;
   margin-bottom: 20px;
+  line-height: 1.5;
 }
 
 .event-card {
-  background-color: #f8f9fa;
-  padding: 20px;
+  background-color: #ffecb3;
+  padding: 30px;
   border-radius: 10px;
-}
-
-.event-card h2 {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.event-card p {
-  font-size: 14px;
-  margin-bottom: 15px;
+  max-width: 300px;
+  margin-top: 20px;
 }
 
 .event-image {
-  width: 100%;
-  border-radius: 10px;
-}
-
-/* 배너 섹션 스타일 */
-.banner-section {
-  width: 55%;
-}
-
-.banner-image {
   width: 100%;
   height: auto;
   border-radius: 10px;
   object-fit: cover;
 }
-/* Swiper 슬라이더 스타일 */
+
+/* Swiper Section */
 .banner-section {
+  width: 50%;
+  padding: 40px;
+}
+
+.banner-image {
   width: 100%;
-  max-width: 1920px;
-  margin: 0 auto;
-  padding: 20px;
+  height: 500px;
+  border-radius: 10px;
+  object-fit: cover;
 }
 
 .swiper-slide-content {
   position: relative;
   overflow: hidden;
-  border-radius: 50px; /* 이미지의 둥근 모서리 */
+  border-radius: 10px; /* Rounded corners for images */
   width: 100%;
-  height: 500px; /* 적절한 높이 설정 */
+  height: 500px;
 }
 
 .banner-image {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* 이미지가 컨테이너를 채우도록 */
+  object-fit: cover; /* Ensure the image covers the container */
 }
 
-/* 링크 복사 아이콘 스타일 */
+/* ================= MAIN2 AND MAIN3 STYLING ================= */
+.curriculum-section {
+  margin-top: 60px;
+}
+
+.curriculum-header {
+  text-align: left;
+}
+
+.curriculum-header .badge {
+  background-color: #f8d16f;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.curriculum-header h2 {
+  font-size: 2.5rem;
+  margin: 10px 0 20px;
+}
+
+.curriculum-header p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* Subjects Grid */
+.subjects-grid {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.subject-card {
+  background-color: #fff8e5; /* Light yellow background */
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 140px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease; /* Smooth transition for background */
+}
+
+.subject-card img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.subject-card p {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Hover Effect for Subject Cards */
+.subject-card:hover {
+  background-color: #ffd700; /* Darker yellow background on hover */
+}
+
+.book-covers-section {
+  margin-top: 60px;
+}
+
+.book-covers-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.book-covers-grid img {
+  width: 200px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* ================= COPY LINK ICON ================= */
 .copy-link-icon {
   position: fixed;
   bottom: 20px;
@@ -160,40 +320,63 @@
   width: 30px;
   height: 30px;
 }
-/*푸터*/
-.footer {
-  background-color: #333; /* 배경색 */
-  color: #fff; /* 텍스트 색상 */
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+/* ================= RESPONSIVE DESIGN ================= */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-left,
+  .hero-right {
+    width: 100%;
+    text-align: center;
+  }
+
+  .event-card {
+    max-width: 100%;
+  }
+
+  .swiper-image {
+    max-height: 300px;
+  }
+
+  .subjects-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .subject-card {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .book-covers-grid img {
+    width: 150px;
+    height: 200px;
+  }
 }
 
-.footer-content {
-  max-width: 1920px;
-  display: flex;
-  align-items: center; /* 로고와 텍스트를 수평으로 정렬 */
-  width: 100%;
-}
+@media (max-width: 1920px) {
+  .main-content {
+    padding: 10px;
+  }
 
-.footer-logo {
-  display: flex;
-  align-items: center;
-  margin-right: 20px; /* 로고와 텍스트 간의 간격 */
-}
+  .hero-left h1 {
+    font-size: 2.4rem;
+  }
 
-.footer-logo-image {
-  height: 40px;
-  margin-right: 10px; /* 로고와 텍스트 사이의 간격 */
-}
+  .hero-left p {
+    font-size: 1.1rem;
+  }
 
-.footer-text {
-  color: #ccc;
-  font-size: 14px;
-}
+  .curriculum-header h2 {
+    font-size: 2rem;
+  }
 
-.footer-text p {
-  margin: 0 10px 0 0; /* 텍스트 사이 간격 조정 */
-  line-height: 1.5;
+  .book-covers-grid img {
+    width: 160px;
+    height: 230px;
+  }
 }

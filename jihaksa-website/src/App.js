@@ -1,6 +1,8 @@
 import React from 'react';
 import Header from './assets/Header';
-import Main from './assets/Main';
+import Main1 from './assets/Main';
+import Main2 from './assets/Main2';
+import Main3 from './assets/Main3';
 import Footer from './assets/Footer';
 import './App.css';
 
@@ -12,8 +14,15 @@ function App() {
 
   return (
     <div className="app-container">
+      {/* Header Section */}
       <Header />
-      <Main handleCopyLink={handleCopyLink} />
+
+      {/* Main Sections */}
+      <Main1 handleCopyLink={handleCopyLink} />
+      <Main2 />
+      <Main3 />
+
+      {/* Footer Section */}
       <Footer />
     </div>
   );
