@@ -5,7 +5,6 @@ import logo from '../assets/img/icon/Logo.svg';  // Import the logo SVG
 const Loading = () => {
   return (
     <div className="loading-container">
-      로딩테스트
       <img src={logo} alt="Loading logo" className="loading-logo" />
     </div>
   );
