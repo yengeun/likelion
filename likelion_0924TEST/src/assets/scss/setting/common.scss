@@ -1,10 +1,12 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
 html, body {
     width: 100vw;
     height: 100vh;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    font-family: Arial, sans-serif;  /* 기본 폰트 설정 */
+    font-family: 'Pretendard';
 }
   
 .container {
@@ -16,7 +18,9 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff;  /* 필요에 따라 배경색을 설정 */
+    background-color: #fff; 
+    color: #6a6fb3; 
+    font-weight:bold;
 }
 #root {
     display: flex;
