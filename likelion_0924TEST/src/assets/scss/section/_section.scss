@@ -1,5 +1,5 @@
 .header {
-    background-color: #6a6fb3;  // 배경 색상 설정
+    background-color: #6a6fb3; 
     padding: 10px;
     display: flex;
     justify-content: center;
@@ -29,6 +29,33 @@
 }
 
 .nav-item img {
-    width: 25px; /* 아이콘 크기 */
+    width: 25px; 
     height: 25px;
+}
+
+/* Slider.scss */
+.swiper {
+    width: 100%;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+}
+.swiper-pagination-bullet {
+    background-color: #d4c4db;
+    width: 5px;
+    height: 5px;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #fff;
 }
