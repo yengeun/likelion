@@ -32,11 +32,6 @@ header {
     flex-shrink: 0;  // 헤더가 화면 상단에 고정
 }
 
-main {
-    flex-grow: 1;  // 메인 컨텐츠가 중간에 위치하며 스크롤 가능
-    overflow-y: auto;
-}
-
 nav {
     flex-shrink: 0;  // 네비게이션 바가 화면 하단에 고정
 }
